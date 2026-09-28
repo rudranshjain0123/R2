@@ -26,7 +26,8 @@ app.command("/smartestbot-help", async ({ ack, respond }) => {
     text:
 `SmartestBot Commands:
 /smartestbot-ping - Check bot latency
-/smartestbot-help - Show this help`
+/smartestbot-help - Show this help
+/smartestbot-calc 25 * 4 - Multiply two numbers `
   });
 });
 
@@ -45,6 +46,6 @@ app.command("/smartestbot-calc", async ({ command, ack, respond }) => {
   const result = numbers[0] * numbers[1];
 
   await respond({
-    text: `${numbers[0]} × ${numbers[1]} = ${result} 🧮`
+    text: `${numbers[0]} × ${numbers[1]} = ${result} `
   });
 });
